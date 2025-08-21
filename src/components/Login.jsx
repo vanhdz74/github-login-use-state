@@ -17,6 +17,7 @@ export class Login extends Component {
     const { name, email } = this.state.form;
     this.setState({
       users: [...this.state.users, { name, email }],
+      // Sau mỗi lần submit thì reset name, value
       form: { name: "", email: "" },
     });
   };
@@ -78,6 +79,7 @@ export class Login extends Component {
             })}
           </div>
         </div>
+        <h2>Day la thay doi</h2>
       </div>
     );
   }
